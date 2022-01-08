@@ -1,0 +1,83 @@
+@use "../abstracts" as abs;
+.home{
+  display: grid;
+  grid-template-columns: repeat(2,1fr);
+  width: 100%;
+  height: 100vh;
+  justify-items: center;
+  align-items: center;
+  padding-top: 20vh;
+  background-image: url("../../../public/assets/home/background-home-desktop.jpg");
+  background-size: cover;
+  @media only screen and (max-width: abs.$bp-largest) {
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(2,1fr);
+    background-image: url("../../../public/assets/home/background-home-tablet.jpg") ;
+    padding-top: 15vh;
+  }
+  &__description{
+    grid-column: 1 / 2;
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    gap: 2.5rem;
+    @media only screen and (max-width: abs.$bp-largest) {
+      grid-column: 1 / -1;
+      grid-row: 1 / 2;
+    }
+    @media only screen and (max-width: abs.$bp-medium) {
+      width: 90%;
+      align-items: center;
+    }
+    &--header{
+      display: flex;
+      flex-direction: column;
+      gap: 2rem;
+      & span{
+        color: abs.$color-lightblue;
+        font-size: 2.8rem;
+        font-weight: abs.$font-regular;
+        font-family: abs.$font-primary;
+        letter-spacing: 5px;
+        @media only screen and(max-width: abs.$bp-medium){
+          font-size: 1.6rem;
+        }
+      }
+    }
+    &-paragraph{
+      font-size: 1.8rem;
+      color: abs.$color-lightblue;
+      line-height: 3.2rem;
+      font-weight: 400;
+      @media only screen and(max-width: abs.$bp-medium){
+        font-size: 1.5rem;
+      }
+    }
+  }
+  &__cta{
+    grid-column: 2 / 3;
+    cursor: pointer;
+    width: 30rem;
+    height: 30rem;
+    border: none;
+    border-radius: 30rem;
+    font-family: abs.$font-secondary;
+    font-size: 3.2rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    background-color: rgba(34, 34, 34,.75);
+    color: abs.$color-white;
+    transition: all .25s ease-in-out;
+    & a{text-decoration: none;}
+    @media only screen and (max-width: abs.$bp-largest) {
+      grid-column: 1 / -1;
+      grid-row: 2 / 3;
+    }
+    @media only screen and(max-width: abs.$bp-medium){
+      width: 15rem;
+      height: 15rem;
+      font-size: 2rem;
+    }
+    &:hover{box-shadow: 0 0 .1rem 5rem rgba(151, 151, 151,.25);}
+  }
+}

@@ -1,0 +1,72 @@
+@use "./colors" as c;
+@use "./fonts" as f;
+@use "./breakpoints" as b;
+
+h1,h2,h3,h4,h5,h6,span{text-transform: uppercase;}
+
+.heading-1{
+  color: c.$color-white;
+  font-family: f.$font-secondary;
+  font-size: 15rem;
+  font-weight: f.$font-regular;
+  @media only screen and(max-width: b.$bp-medium){font-size: 8rem;}
+}
+
+.heading-2{
+  color: c.$color-white;
+  font-size: 2.8rem;
+  font-weight: f.$font-regular;
+  letter-spacing: 5px;
+  @media only screen and(max-width: b.$bp-medium){font-size: 1.6rem; text-align: center}
+}
+
+.heading-3{ //nav buttons
+  color: c.$color-white;
+  font-size: 1.6rem;
+  font-weight: f.$font-regular;
+  letter-spacing: 3px;
+  cursor: pointer;
+  @media only screen and(max-width: b.$bp-medium){font-size: 1.4rem;}
+}
+
+.heading-4{
+  color: c.$color-white;
+  font-size: 1.4rem;
+  font-weight: f.$font-thin;
+  letter-spacing: 2.5px;
+}
+
+.heading-5{
+  color: c.$color-white;
+  font-size: 5.6rem;
+  font-family: f.$font-secondary;
+  font-weight: f.$font-thin;
+  @media only screen and(max-width: b.$bp-medium){
+    font-size: 2.4rem;
+    text-align: center;
+  }
+}
+
+.section__header{
+  & span{
+    font-weight: f.$font-weight;
+    opacity: .25;
+    margin-right: 2rem;
+  }
+}
+
+.active{
+  border-bottom: .25rem solid c.$color-white;
+  @media only screen and(max-width: b.$bp-medium){
+    border-bottom: none;
+    border-right: .25rem solid c.$color-white;
+  }
+}
+.tech-active{
+  background-color: c.$color-white;
+  & span{color: #222;}
+}
+
+.planet-active{border-bottom: .25rem solid c.$color-white;}
+
+.hidden{display: none !important;}
