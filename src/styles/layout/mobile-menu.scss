@@ -10,11 +10,11 @@
   display: flex;
   background-color: rgba(151, 151, 151,.04);
   backdrop-filter: blur(2.5rem);
-  -ms-transform: translateX(-75%);
-  -webkit-transform: translateX(-75%);
-  -moz-transform: translateX(-75%);
-  -o-transform: translateX(-75%);
-  transform: translateX(75%);
+  -ms-transform: translateX(100%);
+  -webkit-transform: translateX(100%);
+  -moz-transform: translateX(100%);
+  -o-transform: translateX(100%);
+  transform: translateX(100%);
   &--list{
     width: 100%;
     display: flex;
