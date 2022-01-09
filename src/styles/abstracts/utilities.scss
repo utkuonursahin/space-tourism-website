@@ -69,4 +69,14 @@ h1,h2,h3,h4,h5,h6,span{text-transform: uppercase;}
 
 .planet-active{border-bottom: .25rem solid c.$color-white;}
 
-.hidden{display: none !important;}
+.animate{
+  animation: menuMove 1s forwards;
+}
+
+@keyframes menuMove {
+  0%{}
+  100%{
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

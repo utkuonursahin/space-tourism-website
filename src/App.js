@@ -6,13 +6,15 @@ import Crew from "./components/Crew/Crew";
 import Technology from "./components/Technology/Technology"
 import Header from "./components/Header/Header";
 import {MainProvider} from "./context/MainContext";
-import MobileMenu from "./components/Header/MobileMenu/MobileMenu";
+import MobileMenu from "./components/MobileMenu/MobileMenu";
+import {isMobile} from "react-device-detect";
 
 function App() {
   return (
-    <>
-      <Header/>
+    <div className="main">
       <MainProvider>
+        <Header/>
+        {isMobile && <MobileMenu/>}
         <Routes>
           <Route path="/" element={<Home/>} />
           <Route path="/destination" element={<Destination/>} />
@@ -20,7 +22,7 @@ function App() {
           <Route path="/technology" element={<Technology/>} />
         </Routes>
       </MainProvider>
-    </>
+    </div>
   );
 }
 

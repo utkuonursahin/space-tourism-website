@@ -6,9 +6,7 @@ const PlanetView = () => {
   const image = data.destinations.find(destination => destination.name === planetName).images.png
   return (
       <div className="planet">
-        <picture className="planet__img">
-          <img src={image} alt={`${planetName} photo`} />
-        </picture>
+        <img src={image} alt={`${planetName} photo`} className="planet__img"/>
 
         <PlanetNav/>
         <PlanetInfo/>

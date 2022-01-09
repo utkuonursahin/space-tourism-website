@@ -22,21 +22,20 @@
       grid-template-columns: 1fr;
       grid-template-rows: repeat(2,min-content) 1fr;
       justify-items: center;
-      grid-row-gap: 2.5rem;
+      grid-row-gap: 1.5rem;
     }
     &__img{
       grid-column: 1 / 2;
       grid-row: 1 / -1;
+      height: 100%;
       justify-self: center;
-      & img{
-        height: 100%;
-        @media only screen and(max-width: abs.$bp-medium){
-          max-height: 75%;
-        }
-      }
       @media only screen and(max-width: abs.$bp-largest){
         grid-column: 1 / -1;
         grid-row: 1 / 2;
+      }
+      @media only screen and(max-width: abs.$bp-medium){
+        height: 60%;
+        align-self: center;
       }
     }
 
@@ -56,6 +55,9 @@
         cursor: pointer;
         &-item{
           height: 100%;
+        }
+        @media only screen and(max-width: abs.$bp-medium){
+          gap: 2rem;
         }
       }
     }
