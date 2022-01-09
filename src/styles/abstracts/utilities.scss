@@ -76,7 +76,10 @@ h1,h2,h3,h4,h5,h6,span{text-transform: uppercase;}
 @keyframes menuMove {
   0%{}
   100%{
-    opacity: 1;
+    -ms-transform: translateX(0);
+    -webkit-transform: translateX(0);
+    -moz-transform: translateX(0);
+    -o-transform: translateX(0);
     transform: translateY(0);
   }
 }

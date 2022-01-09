@@ -6,11 +6,14 @@
   top: 0;
   right: 0;
   width: 50vw;
-  min-height: 100vh;
+  height: 100%;
   display: flex;
   background-color: rgba(151, 151, 151,.04);
   backdrop-filter: blur(2.5rem);
-  opacity: 0;
+  -ms-transform: translateX(-75%);
+  -webkit-transform: translateX(-75%);
+  -moz-transform: translateX(-75%);
+  -o-transform: translateX(-75%);
   transform: translateX(75%);
   &--list{
     width: 100%;
