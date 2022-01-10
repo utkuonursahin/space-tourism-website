@@ -69,17 +69,10 @@ h1,h2,h3,h4,h5,h6,span{text-transform: uppercase;}
 
 .planet-active{border-bottom: .25rem solid c.$color-white;}
 
-.animate{
-  animation: menuMove 1s forwards;
-}
+@keyframes menuMove { 100%{transform: translateX(0);} }
+@-webkit-keyframes menuMove { 100%{-webkit-transform: translateX(0); transform: translateX(0);} }
 
-@keyframes menuMove {
-  0%{}
-  100%{
-    -ms-transform: translateX(0);
-    -webkit-transform: translateX(0);
-    -moz-transform: translateX(0);
-    -o-transform: translateX(0);
-    transform: translateY(0);
-  }
+.menu-move{
+  -webkit-animation: menuMove 1s forwards;
+  animation: menuMove 1s forwards;
 }

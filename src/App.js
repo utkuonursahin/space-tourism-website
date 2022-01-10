@@ -11,7 +11,7 @@ import {isMobile} from "react-device-detect";
 
 function App() {
   return (
-    <div className="main">
+    <div className="app">
       <MainProvider>
         <Header/>
         {isMobile && <MobileMenu/>}

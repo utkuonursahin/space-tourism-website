@@ -8,13 +8,16 @@
   width: 50vw;
   height: 100%;
   display: flex;
-  background-color: rgba(151, 151, 151,.04);
-  backdrop-filter: blur(2.5rem);
   -ms-transform: translateX(100%);
   -webkit-transform: translateX(100%);
   -moz-transform: translateX(100%);
   -o-transform: translateX(100%);
-  transform: translateX(100%);
+  transition: all 1s ease-in-out;
+  @supports (backdrop-filter: blur()) {
+    background-color: rgba(151, 151, 151,.04);
+    backdrop-filter: blur(2.5rem);
+  }
+  background-color: rgb(56, 56, 56);
   &--list{
     width: 100%;
     display: flex;

@@ -4,7 +4,7 @@ const MobileMenu = () => {
   const {isActive,setIsActive} = useMain()
   const closeMenu = e => {if(e.target.tagName === 'A') setIsActive(false)}
   return (
-      <nav className={`mobile-nav ${isActive ? 'animate' : ''}`} onClick={closeMenu}>
+      <nav className={`mobile-nav ${isActive && 'menu-move'}`} onClick={closeMenu}>
         <ul className="mobile-nav--list">
           <li className="mobile-nav--list-item">
             <h3 className="heading-3">
